@@ -24,8 +24,8 @@ class _HomeHallWidgetState extends State<HomeHallWidget>
 
   @override
   void dispose() {
-    super.dispose();
     _tabController.dispose();
+    super.dispose();
   }
 
   @override
