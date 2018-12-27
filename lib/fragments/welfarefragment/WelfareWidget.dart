@@ -36,11 +36,13 @@ class _WelfareWidgetState extends State<WelfareWidget>
             itemBuilder: (buildContext, index) {
               return GestureDetector(
                 child: Hero(
-                    tag: "index_$index",
-                    child: Image.network(
-                      _welfareEntities[index].thumb,
-                      fit: BoxFit.cover,
-                    )),
+                  tag: "index_$index",
+                  child: FadeInImage.assetNetwork(
+                    placeholder: "assets/default_img.png",
+                    image: _welfareEntities[index].thumb,
+                    fit: BoxFit.cover,
+                  ),
+                ),
                 onTap: () {
                   Navigator.push(context,
                       CupertinoPageRoute(builder: (buildContext) {
